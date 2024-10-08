@@ -1,0 +1,186 @@
+.table-container {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    position: relative;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #2E375A;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tablehead {
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+    background-color: var(--IDGOrange);
+    color: white;
+    user-select: none;
+}
+
+.tablehead-cell {
+    border: 1px solid black;
+    height: 25px;
+    border-width: 1px 1px 1px 0;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.1rem;
+    resize: horizontal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    text-align: start;
+    /* text-align: center; Mais adequado, avaliar se o Resize permite*/
+}
+
+.tablehead-cell-icons {
+    width: 40px;
+    resize: none;
+}
+
+.tablehead-cell:first-child {
+    border-left: 1px solid black;
+}
+
+.line {
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+
+.line:nth-child(even) {
+    background-color: var(--DarkFormGray);
+}
+
+.line:nth-child(even).line-selected {
+    background-color: var(--LineHoverSelect) !important;
+}
+
+.line:hover {
+    background-color: var(--LineHoverSelect) !important;
+}
+
+.row--red {
+    color: #ca000a;
+    background-color: rgb(252, 214, 214) !important;
+    font-weight: bold;
+}
+
+.selected-item {
+    font-weight: bold;
+}
+
+.line-td {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.35rem 0.25rem;
+    max-width: 100px;
+    overflow: hidden;
+    border: 1px solid black;
+    height: 1vh;
+}
+
+.line-td-button {
+    text-align: center;
+    width: 40px;
+}
+
+.disabled-line {
+    color: red;
+    font-style: italic;
+    cursor: not-allowed;
+}
+
+.disabled-line:hover {
+    background-color: var(--DarkFormGray);
+}
+
+.disabled-line:nth-child(odd):hover {
+    background-color: inherit;
+}
+
+.input-checkbox {
+    width: 100%;
+    cursor: pointer;
+}
+
+.svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.svg--delete {
+    fill: var(--LightRed);
+}
+
+.svg--delete:hover {
+    fill: var(--DarkRed);
+}
+
+/* ---------- Media Queries ---------- */
+@media screen and (max-height: 765px) {
+    .tablehead-cell {
+        font-size: 0.7rem;
+    }
+
+    .line-td {
+        font-size: 0.6rem;
+        padding: 0.35rem 0.1rem;
+        height: 20px;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .tablehead-cell {
+        font-size: 0.6rem;
+        padding: 1px 0.1rem;
+        height: 20px;
+    }
+
+    .line-td {
+        font-size: 0.5rem;
+        padding: 0.35rem 0.1rem;
+        height: 20px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .tablehead-cell {
+        font-size: 0.5rem;
+        padding: 1px 0.1rem;
+        height: 20px;
+    }
+
+    .line-td {
+        font-size: 0.45rem;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    .line-td {
+        padding: 1px 0.1rem;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .tablehead-cell {
+        font-size: 0.35rem;
+        height: 12px;
+    }
+
+    .line-td {
+        font-size: 0.4rem;
+        height: 15px;
+    }
+}

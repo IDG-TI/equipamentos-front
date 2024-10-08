@@ -1,0 +1,320 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    padding: 5px;
+    position: relative;
+}
+
+.button-text {
+    font-size: 1rem;
+    transition: color 0.2s ease-in-out;
+    color: white;
+}
+
+.svg-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 80%;
+    right: 0;
+    border: solid white;
+    border-width: 0 0 0 2px;
+    transition: width 0.2s ease-in-out,
+        border-width 0.2s ease-in-out;
+}
+
+button:hover .svg-container {
+    width: 100%;
+    border-width: 0;
+}
+
+.button:hover .button-text {
+    color: transparent;
+}
+
+.button:hover .svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* .button-add {
+    font-family: inherit;
+    font-size: 18px;
+    background-color: var(--IDGBlue);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    margin-left: 20px;
+    margin-top: 15px;
+    grid-column-start: 8;
+    grid-column-end: 9;
+    cursor: pointer;
+}
+
+.button-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
+}
+
+.button-add:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    fill: white;
+    transition: all 0.25s;
+    margin-top: 15px;
+}
+
+.button-add span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+
+.button-add svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+    display: flex;
+}
+
+.button-add .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.button-add:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-add:hover svg {
+    transform: rotate(45deg);
+} */
+
+.button-save {
+    width: 15%;
+    border: none;
+    display: flex;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-family: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+    justify-content: center;
+    transition: all 0.15s;
+    background-color: var(--IDGBlue);
+}
+
+.button-save:hover {
+    background-color: var(--DarkGreen);
+    color: #fff;
+}
+
+.svg {
+    top: 50%;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: transform 0.2s ease-in-out,
+        width 0.2s ease-in-out,
+        height 0.2s ease-in-out;
+}
+
+.button-clear {
+    background-color: var(--IDGBlack);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-clear:hover {
+    background-color: black;
+}
+
+.button-search {
+    background-color: var(--IDGBlue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-search:hover {
+    background-color: var(--IDGBlueTiny);
+}
+
+.button-reject {
+    background-color: rgb(221, 36, 36);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-reject:hover {
+    background-color: var(--LightRed);
+}
+
+.button-confirm {
+    background-color: var(--IDGBlue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-confirm:hover {
+    background-color: var(--DarkGreen);
+}
+
+.button-add {
+    background-color: var(--IDGBlack);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-add:hover {
+    background-color: var(--IDGLighterBlack);
+}
+
+.button-add:hover svg {
+    transform: rotate(90deg);
+}
+
+.button-dashboard {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background-color: var(--IDGOrange);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-dashboard:hover {
+    background-color: var(--LightOrange);
+}
+
+.button-report {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background-color: var(--IDGBlue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-report:hover {
+    background-color: var(--IDGBlueTiny);
+}
+
+.button-dashboard {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background-color: var(--IDGOrange);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-dashboard:hover {
+    background-color: var(--LightOrange);
+}
+
+.button-report {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background-color: var(--IDGBlue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-report:hover {
+    background-color: var(--IDGBlueTiny);
+}
+
+.button-clear-dashboard {
+    width: 100%;
+    background-color: var(--IDGBlack);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-clear-dashboard:hover {
+    background-color: black;
+}
+
+
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-height: 765px) {
+    .button {
+        width: 100px;
+        height: 35px;
+    }
+
+    .button-text {
+        font-size: 0.8rem;
+    }
+
+    .svg-container {
+        width: 30px;
+    }
+
+    .svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .button {
+        height: 30px;
+    }
+
+    .button-text {
+        font-size: 0.7rem;
+    }
+
+    .svg-container {
+        width: 25px;
+    }
+
+    .svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .button {
+        height: 25px;
+    }
+
+    .button-text {
+        font-size: 0.6rem;
+    }
+
+    .svg-container {
+        width: 20px;
+    }
+
+    .svg {
+        width: 10px;
+        height: 10px;
+    }
+}

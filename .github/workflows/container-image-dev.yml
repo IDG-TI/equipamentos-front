@@ -1,0 +1,34 @@
+name: frontend apontamento container image dev
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: docker login
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag idgengenhariaeconsultoria/apontamento-horas-front-dev:latest
+
+      - name: Docker Push
+        run: docker push idgengenhariaeconsultoria/apontamento-horas-front-dev:latest
+
+      - name: Update Image
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          git config --global user.name "automacao.idg" && git config --global user.email "ti@idg.com"
+          git fetch && git checkout develop
+          git pull
+          sed -i -e "s/version:.*/version: $IMAGE_TAG/g" infra/dev/app.yaml
+          git add . && git commit -m "CI: update imagem tag" && git push origin develop

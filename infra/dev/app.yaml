@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apontamento-horas-front-dev-deployment
+  namespace: idg-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apontamento-horas-front-dev
+  template:
+    metadata:
+      labels:
+        app: apontamento-horas-front-dev
+        version: c00661c6db9daa6b8bb793aa8035e3923fd0eb06
+    spec:
+      containers:
+        - name: apontamento-horas-front-dev
+          image: idgengenhariaeconsultoria/apontamento-horas-front-dev:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: API_APONTAMENTO_URL
+              value: http://api-apontamento-dev.info/v1
+            - name: API_CONTRATO_URL
+              value: http://api-gestao-projetos-dev.info/v1
+            - name: API_RM_URL
+              value: http://api-rm-dev.info/v1
+      imagePullSecrets:
+        - name: dockerhub-secret-idg

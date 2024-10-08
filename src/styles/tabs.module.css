@@ -1,0 +1,303 @@
+.tab-component {
+    display: flex;
+}
+
+.tab-container {
+    display: block;
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.3rem;
+    overflow: auto;
+    height: 40px;
+    border: solid var(--IDGBlue);
+    border-width: 0 0 6px 0;
+    width: 100%;
+}
+
+.container-tab-component {
+    width: 100%;
+    height: 400px;
+}
+
+.tab-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tab-contrato-container {
+    display: flex;
+    gap: 0.3rem;
+    width: 100%;
+    min-height: 25px;
+}
+
+.tab-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.25rem;
+    align-items: center;
+    background-color: white;
+    border: 1px solid lightgray;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    height: 100%;
+}
+
+.tab-title {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.35rem 1rem;
+    white-space: nowrap;
+}
+
+.tab-item:hover {
+    background-color: var(--DarkTabGray);
+}
+
+.tab-active {
+    background-color: var(--IDGBlue);
+    color: white;
+    border: 1px solid var(--IDGBlue);
+    cursor: default;
+}
+
+.tab-active:hover {
+    background-color: var(--IDGBlue);
+    color: white;
+    border: 1px solid var(--IDGBlue);
+    cursor: default;
+}
+
+.tab-close-svg {
+    fill: white;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--LightRed);
+    background-color: var(--LightRed);
+    border-radius: 10px;
+    padding: 0.1rem;
+    transition: background .3s ease;
+}
+
+.tab-update-svg {
+    fill: white;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--DarkGreen);
+    background-color: var(--DarkGreen);
+    border-radius: 10px;
+    padding: 0.1rem;
+    transition: background .3s ease;
+}
+
+.tab-open-svg {
+    fill: white;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--IDGBlueTiny);
+    background-color: var(--IDGBlueTiny);
+    border-radius: 10px;
+    padding: 0.1rem;
+    transition: background .3s ease;
+}
+
+.table-tab-component {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-form {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.tab-form-gerencia {
+    height: 60vh;
+}
+
+.projeto-inputs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 1rem;
+}
+
+.textarea-inputs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.responsavel-inputs-container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.titulo-alteracao-input {
+    grid-column: 1/-1;
+}
+
+.titulo-projeto-input {
+    grid-column: 2/-1;
+}
+
+.subtitulo-inputs-container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    gap: 1rem;
+}
+
+.add-svg-icon {
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--IDGBlue);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.add-svg-icon:hover {
+    background-color: var(--IDGBlueDarker);
+}
+
+.button-servico-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.button-ae-insert {
+    margin-top: 1rem;
+    background-color: var(--IDGBlue);
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 8rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button-ae-insert:hover {
+    background: var(--IDGBlueDarker);
+}
+
+.tab-relative {
+    position: relative;
+}
+.tab--revealed{
+    animation: revealtab 0.3s alternate;
+}
+.tab--hidden{
+    display: none;
+}
+.label-hidden {
+    display: none;
+}
+@keyframes revealtab {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width: 1024px) {
+    .tab-item {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .tab-title {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tab-title {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.75rem;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .tab-item {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .tab-title {
+        font-size: 0.8rem;
+        padding: 0.1rem 0.5rem;
+    }
+
+    .tab-close-svg {
+        width: 0.9rem;
+        height: 0.9rem;
+        padding: 1px;
+    }
+
+    .tab-open-svg {
+        width: 0.9rem;
+        height: 0.9rem;
+        padding: 1px;
+    }
+
+    .tab-update-svg {
+        width: 0.9rem;
+        height: 0.9rem;
+        padding: 1px;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    .tab-title {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.4rem;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .tab-container {
+        height: 30px;
+        margin-top: 10px;
+    }
+    
+    .tab-close-svg {
+        width: 0.8rem;
+        height: 0.8rem;
+        padding: 1px;
+    }
+
+    .tab-open-svg {
+        width: 0.8rem;
+        height: 0.8rem;
+        padding: 1px;
+    }
+
+    .tab-update-svg {
+        width: 0.8rem;
+        height: 0.8rem;
+        padding: 1px;
+    }
+
+    .tab-title {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+}

@@ -1,0 +1,171 @@
+.principal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 146px);
+    overflow: auto;
+    width: 100%;
+}
+
+.container-principal-tables {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5px;
+    gap: 0.5rem;
+}
+
+.container-table-solicitarAprovacao {
+    grid-column: 1 / 2;
+    overflow: hidden;
+    user-select: none;
+}
+
+.container-table-liberarHoras {
+    grid-column: 2 / 3;
+    overflow: hidden;
+    user-select: none;
+}
+
+.principal-svg {
+    width: 600px;
+    user-select: none;
+}
+
+.title-svg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--IDGBlue);
+}
+
+.container-text-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.title-menssege {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    user-select: none;
+    text-align: center;
+}
+
+.svg-tabs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width: 1024px) {
+    .principal-svg {
+        width: 500px;
+    }
+
+    .title-menssege {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-menssege {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-height: 765px) {
+    .principal-svg {
+        width: 400px;
+    }
+
+    .title-menssege {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .container-table-title {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .container-table-title {
+        font-size: 0.7rem;
+    }
+    
+    .principal-svg {
+        width: 300px;
+    }
+
+    .title-svg {
+        padding: 3px;
+    }
+
+    .title-menssege {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    .principal-container {
+        height: calc(100vh - 116px);
+    }
+    
+    .principal-svg {
+        width: 250px;
+    }
+
+    .title-menssege {
+        font-size: 0.6rem;
+    }
+
+    .container-table-title {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .principal-container {
+        height: calc(100vh - 85px);
+    }
+    
+    .container-text-picture {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    
+    .container-table-title {
+        font-size: 0.55rem;
+    }
+    
+    .principal-svg {
+        width: 200px;
+    }
+
+    .title-svg {
+        padding: 2px;
+    }
+
+    .title-menssege {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .container-table-title {
+        font-size: 0.5rem;
+    }
+
+    .title-menssege {
+        font-size: 0.5rem;
+    }
+}

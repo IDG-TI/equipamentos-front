@@ -1,0 +1,328 @@
+.carousel-header {
+    margin: 5px 10px;
+    background: #FFEFBA;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    border: 1px solid black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: monospace;
+    box-shadow: 0 0 5px gray;
+    user-select: none;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.carousel-button {
+    background-color: var(--IDGBlue);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 35px;
+    border: none;
+    box-shadow: 0 0 10px gray;
+}
+
+.carousel-button:hover {
+    background-color: var(--IDGBlueTiny);
+    box-shadow: none;
+}
+
+.carousel-svg-arrow {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 10px;
+    height: 100px;
+    user-select: none;
+    overflow: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.carousel:focus {
+    outline: none;
+}
+
+.carousel-month {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.carousel-month--left {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: exit-to-left 1s ease-in-out forwards;
+}
+
+.carousel-month--right {
+    opacity: 0;
+    animation: exit-to-right 1s ease-in-out forwards;
+}
+
+.carousel-month-new--left {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: arrive-from-left 1s ease-in-out forwards;
+}
+
+.carousel-month-new--right {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: arrive-from-right 1s ease-in-out forwards;
+}
+
+@keyframes arrive-from-left {
+    from {
+        opacity: 0;
+        transform: translate(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes exit-to-left {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes arrive-from-right {
+    from {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes exit-to-right {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.day-box-container {
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    flex: 1;
+    height: 60px;
+    font-size: 0.9rem;
+}
+
+.day-box-container:hover {
+    background-color: gray;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.day-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    box-shadow: 0 0 5px gray;
+    min-width: 35px;
+}
+
+.day-box--selected {
+    animation: reveal 0.3s ease-in forwards;
+}
+
+@keyframes reveal {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: gray;
+    }
+}
+
+.day-box--apontamento-selected {
+    transition: background-color 0.3s ease-in-out;
+    /* background-color: var(--IDGBlueTiny); */
+    background-color: rgb(217, 245, 217);
+    /* color: white; */
+    font-weight: bold;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-height: 640px) {
+    .carousel-header {
+        font-size: 0.8rem;
+        height: 20px;
+        margin-top: 0;
+    }
+
+    .carousel {
+        height: 70px;
+    }
+
+    .carousel::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    
+    .day-box-container {
+        height: 50px;
+        font-size: 0.7rem;
+    }
+
+    .carousel-button {
+        width: 25px;
+    }
+
+    .carousel-svg-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .day-box {
+        min-width: 25px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .carousel-header {
+        font-size: 0.6rem;
+        height: 15px;
+    }
+
+    .carousel {
+        height: 50px;
+    }
+
+    .carousel::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    .day-box-container {
+        height: 40px;
+        font-size: 0.6rem;
+    }
+
+    .carousel-button {
+        width: 20px;
+    }
+
+    .carousel-svg-arrow {
+        width: 15px;
+        height: 15px;
+    }
+
+    .day-box {
+        min-width: 25px;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .carousel-header {
+        font-size: 0.5rem;
+        height: 12px;
+    }
+
+    .carousel {
+        height: 40px;
+    }
+
+    .carousel::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+
+    .day-box-container {
+        height: 30px;
+        font-size: 0.5rem;
+    }
+
+    .carousel-button {
+        width: 15px;
+    }
+
+    .carousel-svg-arrow {
+        width: 10px;
+        height: 10px;
+    }
+
+    .day-box {
+        min-width: 20px;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .carousel-header {
+        margin-bottom: 2px;
+    }
+    
+    .carousel {
+        height: 35px;
+    }
+
+    .carousel::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+
+    .day-box-container {
+        height: 25px;
+        font-size: 0.4rem;
+    }
+
+    .carousel-button {
+        width: 15px;
+    }
+
+    .carousel-svg-arrow {
+        width: 10px;
+        height: 10px;
+    }
+
+    .day-box {
+        min-width: 20px;
+    }
+}

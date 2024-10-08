@@ -1,0 +1,83 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@atoms/*": [
+        "./components/atoms/*"
+      ],
+      "@molecules/*": [
+        "./components/molecules/*"
+      ],
+      "@organisms/*": [
+        "./components/organism/*"
+      ],
+      "@toasts/*": [
+        "./util/toast/*"
+      ],
+      "@util/*": [
+        "./util/*"
+      ],
+      "@apis/*": [
+        "./util/apis/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+       "@types": [
+        "./src/types.ts"
+      ],
+      "@modal/*": [
+        "./components/molecules/modal/*"
+      ],
+      "@cypress/*": [
+        "./util/cypress/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@formats/*": [
+        "./util/formats/*"
+      ],
+    },
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+, "src/app/not-found.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

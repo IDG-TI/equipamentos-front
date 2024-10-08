@@ -1,0 +1,389 @@
+.loginscreen-label {
+    padding: 14px;
+    font-family: 'Harabara', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--IDGBlack);
+    border-radius: 20px;
+    width: 100%;
+    cursor: text;
+}
+
+.loginscreen-input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.loginscreen-svgicon {
+    fill: var(--IDGBlue);
+    width: 20px;
+    height: 20px;
+}
+
+.loginscreen-svgicon--lock {
+    cursor: pointer;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.corpoTecnico-label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.select {
+    width: 100%;
+    height: 27px;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    height: 27px;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    padding: 0 5px;
+}
+
+.input:read-only {
+    background-color: rgb(212, 212, 212);
+    border-color: gray;
+    box-shadow: none;
+    cursor: auto;
+    font-style: italic;
+}
+
+.textarea:read-only {
+    background-color: rgb(212, 212, 212);
+    border-color: gray;
+    box-shadow: none;
+    cursor: auto;
+    font-style: italic;
+}
+
+.input-value--hidden {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    user-select: none;
+    text-align: end;
+    cursor: pointer;
+    width: 50px;
+}
+
+.input-search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-search-container input {
+    cursor: pointer;
+}
+
+.input-search-icon {
+    width: 27px;
+    height: 27px;
+    padding: 3px;
+    fill: white;
+    background-color: var(--IDGBlue);
+}
+
+.textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    padding: 5px;
+    resize: none;
+}
+
+.textarea::placeholder {
+    color: var(--IDGBlack);
+}
+
+.input-switch {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    width: 60px;
+    height: 27px;
+    background-color: gray;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, left 0.3s ease-in-out;
+    position: relative;
+}
+
+.input-switch:disabled {
+    cursor: not-allowed;
+}
+
+.input-switch::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    transition: background-color 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.input-switch:checked {
+    background-color: var(--IDGBlue);
+}
+
+.input-switch:checked::before {
+    left: 35px;
+}
+
+.container-time {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-time-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.select:disabled {
+    background-color: rgb(212, 212, 212);
+    box-shadow: none;
+    border-color: gray;
+    cursor: not-allowed;
+    font-style: italic;
+    color: black;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (min-width: 2560px) {
+    .loginscreen-input {
+        font-size: 2rem;
+    }
+
+    .loginscreen-svgicon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .loginscreen-svgicon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loginscreen-input {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .loginscreen-svgicon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .loginscreen-input {
+        font-size: 0.9rem;
+
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .label {
+        gap: 5px;
+        font-size: 0.7rem;
+    }
+
+    .span-input {
+        font-size: 0.7rem;
+    }
+
+    .input {
+        height: 20px;
+        font-size: 0.6rem;
+    }
+
+    .input-search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .select {
+        height: 20px;
+        font-size: 0.6rem;
+    }
+
+    .input-switch {
+        width: 50px;
+        height: 20px;
+    }
+
+    .input-switch::before {
+        left: 3px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .input-switch:checked {
+        background-color: var(--IDGBlue);
+    }
+
+    .input-switch:checked::before {
+        left: 30px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .label {
+        gap: 2px;
+        font-size: 0.6rem;
+    }
+
+    .span-input {
+        font-size: 0.6rem;
+    }
+
+    .input {
+        height: 18px;
+        font-size: 0.5rem;
+    }
+
+    .input-search-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .select {
+        height: 18px;
+        font-size: 0.6rem;
+    }
+
+    .input-switch {
+        width: 45px;
+        height: 18px;
+    }
+
+    .input-switch::before {
+        left: 3px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .input-switch:checked {
+        background-color: var(--IDGBlue);
+    }
+
+    .input-switch:checked::before {
+        left: 28px;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    .loginscreen-svgicon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .loginscreen-input {
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .loginscreen-svgicon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .loginscreen-input {
+        font-size: 0.8rem;
+        padding: 1px;
+    }
+
+    .label {
+        gap: 2px;
+        font-size: 0.5rem;
+    }
+
+    .span-input {
+        font-size: 0.5rem;
+    }
+
+    .input {
+        height: 15px;
+        font-size: 0.4rem;
+    }
+
+    .input-search-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .select {
+        height: 15px;
+        font-size: 0.6rem;
+
+    }
+
+    .input-switch {
+        width: 45px;
+        height: 15px;
+    }
+
+    .input-switch::before {
+        left: 3px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .input-switch:checked {
+        background-color: var(--IDGBlue);
+    }
+
+    .input-switch:checked::before {
+        left: 28px;
+    }
+}

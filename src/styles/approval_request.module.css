@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.container-solicitacao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 90%;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px gray;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0 10px ;
+}
+
+.container-solicitacao-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.span-solicitacao-info {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.span-solicitacao-value {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
