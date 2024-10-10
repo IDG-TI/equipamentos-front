@@ -27,7 +27,7 @@ npm run dev
 
 # Estrutura de Pastas
 
-A estrutura de pastas da aplicação **Apontamento de Horas** segue o padrão **Atomic Design**, que organiza os componentes de uma aplicação **React.js** em diferentes níveis de abstração, conforme a complexidade dos componentes:
+A estrutura de pastas da aplicação **Equipamentos** segue o padrão **Atomic Design**, que organiza os componentes de uma aplicação **React.js** em diferentes níveis de abstração, conforme a complexidade dos componentes:
 
 - **Átomos:** Componentes básicos e indivisíveis, como botões, inputs, labels, etc.
 - **Moléculas:** Componentes compostos por átomos, como formulários e modais.
