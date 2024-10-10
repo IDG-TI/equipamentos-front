@@ -8,11 +8,11 @@ import TabStyle from "@styles/tabs.module.css";
 import Principal from "@organisms/Principal";
 import { CURRENT_VERSION, ReleaseNotes } from "@organisms/Release_Notes";
 import { setCookie } from "nookies";
-import VerEquipamentos from "@components/organism/VerEquipamentos";
-import CadastrarEquipamento from "@components/organism/CadastrarEquipamento";
+import VerEquipamentos from "./VerEquipamentos";
+import CadastrarEquipamento from "./CadastrarEquipamento";
 import RegistrarEmprestimoCalibracao from "@components/organism/RegistrarEmprestimoCalibracao";
-import TermosCompromisso from "@components/organism/TermosCompromisso";
-import VerRegistrosEmprestimosCalibracao from "@components/organism/VerRegistrosEmprestimosCalibracao";
+import TermosCompromisso from "./TermosCompromisso";
+import VerRegistrosEmprestimosCalibracao from "./VerRegistrosEmprestimosCalibracao";
 export default function HeaderNavbar({ roles, userAlreadyViewedReleaseNotes }) {
   const [activeTab, setActiveTab] = useState(0);
   const [tabs, setTabs] = useState<any>([

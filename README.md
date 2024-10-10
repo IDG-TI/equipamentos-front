@@ -21,11 +21,9 @@ npm install
 npm run dev
 ```
 
-<!-- Link da aplicação em ambiente de produção: http://gestao-projetos-dev.id.eng.br/ -->
-
 # Descrição
 
-**Apontamento de Horas** é um sistema interno desenvolvido para a **IDG Engenharia e Consultoria** com o objetivo de controlar a apropriação de horas dos colaboradores, além de oferecer funcionalidades adicionais relacionadas ao gerenciamento de horas trabalhadas. De forma geral, o **Apontamento de Horas** traz novamente funcionalidades já presentes no **apontamento.info**, trazendo atualizações e melhorias em determinadas regras de negócios, bem como um visual atualizado e a utilização de tecnologias modernas.
+**Equipamentos** é um sistema interno desenvolvido para a **IDG Engenharia e Consultoria**, com o objetivo de controlar o registro e gerenciamento de equipamentos utilizados nos projetos da empresa. De forma geral, o **Equipamentos** traz novamente funcionalidades já presentes no **equipamentos.info**, trazendo atualizações e melhorias em determinadas regras de negócios, bem como um visual atualizado e a utilização de tecnologias modernas.
 
 # Estrutura de Pastas
 
@@ -63,29 +61,21 @@ Abaixo, a estrutura de diretórios detalhada da aplicação:
 
 # Funcionalidades Propostas
 
-O sistema **Apontamento de Horas** oferece uma gama de funcionalidades para facilitar o gerenciamento e controle de horas trabalhadas pelos colaboradores. As principais funcionalidades propostas incluem:
+O sistema **Equipamentos** foi desenvolvido para a **IDG Engenharia e Consultoria** com o objetivo de aprimorar o controle e gestão dos equipamentos utilizados nos projetos da empresa. As principais funcionalidades incluem:
 
-- **Cadastro e Consulta de Apontamento de Horas:** Permite o registro e a visualização das horas trabalhadas pelos colaboradores.
-  
-- **Cadastro de Registro Extraordinário:** Funcionalidade para registrar horas extraordinárias, como horas extras e trabalho em feriados.
+**Cadastro e Gerenciamento de Equipamentos**: O sistema permite que os usuários registrem novos equipamentos, incluindo informações detalhadas como identificação, tipo, data de aquisição, estado atual (se está ativo ou inativo), responsável e a seção em que o equipamento está localizado. Além disso, é possível consultar e filtrar os equipamentos com base em critérios como tipo e responsável, permitindo uma gestão mais eficiente.
 
-- **Gerenciamento de Colaboradores:** Administração dos dados dos colaboradores, incluindo atribuição de funções e permissões.
+**Controle de Manutenção e Calibração**: Uma das funcionalidades mais importantes do sistema é a capacidade de registrar manutenções e calibrações dos equipamentos. Os usuários podem adicionar informações como data da última manutenção, próxima calibração prevista, e detalhes do serviço, como fornecedor e o responsável. O sistema também envia notificações automáticas para alertar os responsáveis quando a data de manutenção ou calibração estiver próxima de expirar.
 
-- **Rateio Fixo:** Configuração de rateio de horas ou custos fixos entre diferentes projetos ou centros de custo.
+**Gestão de Empréstimos de Equipamentos**: O sistema possibilita o controle dos empréstimos de equipamentos, registrando a data de empréstimo, data prevista de devolução, quem pegou o equipamento e quem autorizou o empréstimo. Para garantir uma operação tranquila, notificações automáticas são enviadas quando o prazo de devolução estiver próximo ou for ultrapassado.
 
-- **Solicitação de Aprovação:** Sistema para envio de solicitações de aprovação de horas registradas pelos colaboradores.
+**Descarte e Sucata**: Caso um equipamento não esteja mais em uso, o sistema permite marcar esses itens como sucateados, tornando-os inativos na base de dados. Além disso, é possível registrar o motivo e a data de descarte, garantindo um histórico completo de cada equipamento ao longo do seu ciclo de vida.
 
-- **Aprovação:** Ferramenta para gestores revisarem e aprovarem ou rejeitarem as horas trabalhadas registradas.
+**Relatórios Detalhados**: Para apoiar a tomada de decisões e facilitar a gestão, o sistema gera relatórios detalhados sobre o status dos equipamentos, manutenções realizadas, empréstimos e descartes. Esses relatórios podem ser exportados em formatos como PDF ou Excel, permitindo que os dados sejam facilmente compartilhados e analisados.
 
-- **Medição de Terceiros:** Controle e registro das horas trabalhadas por terceiros, permitindo a gestão integrada de equipes externas.
+**Notificações Personalizadas**: O sistema é configurado para enviar notificações personalizadas ao usuário Recepção sobre eventos importantes, como o vencimento de calibrações, a necessidade de manutenção, e atrasos na devolução de equipamentos, garantindo que nenhuma atividade crítica passe despercebida.
 
-- **IMRM (Importar Medição para o RM):** Funcionalidade para substituir o atual painel do IMRM.
-
-- **Relatório Geral:** Geração de relatórios consolidados de horas trabalhadas, aprovações, rateios e outros dados relevantes.
-
-- **Painel de Gestor:** Interface personalizada para gestores, oferecendo uma visão abrangente das atividades e relatórios relacionados aos colaboradores sob sua supervisão.
-
-- **Configurações de Admin:** Painel administrativo para configurar parâmetros globais do sistema, gerenciar acessos e definir políticas de uso.
+**Logout Seguro**: O sistema oferece uma opção de logout seguro, garantindo que, ao finalizar a sessão, o usuário seja redirecionado para a tela de login.
 
 # Tecnologias Utilizadas
 

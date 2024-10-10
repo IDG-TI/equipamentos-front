@@ -73,7 +73,7 @@ export default function Principal() {
           <picture>
             <img
               className={PrincipalStyle["principal-svg"]}
-              src="Eqlmg.svg"
+              src="EqImg.svg"
               alt=""
             />
           </picture>
