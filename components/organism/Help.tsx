@@ -1,8 +1,3 @@
-
-export default function Help(){
-    return (
-        // <HelpApontamento/>
-        <>
-        </>
-    )
+export default function Help() {
+  return <></>;
 }

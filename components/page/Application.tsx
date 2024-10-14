@@ -20,23 +20,7 @@ export default function Application({
 
   useEffect(function setUserNameInHeader() {
     setUserName(setName);
-    checkIfUserHasAprovadores();
   }, []);
-
-  async function checkIfUserHasAprovadores() {
-    await fetch("/api/user")
-      .then((resp) => resp.json())
-      .then((data) => {
-        const chefe = data.codigoChefeInterno || data.codigoChefeExterno;
-        const supervisor =
-          data.codigoSupervisorInterno || data.codigoSupervisorExterno;
-        if (!chefe && !supervisor) {
-          showWarningToast(
-            "Você não possui aprovadores cadastrados. Por favor, entre em contato com o setor de RH."
-          );
-        }
-      });
-  }
 
   return (
     <>

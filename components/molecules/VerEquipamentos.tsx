@@ -1,3 +1,8 @@
+import NavBotoesEquipamentos from "../molecules/modal/entity/tabs/Nav_Botoes_Equipamentos";
 export default function VerEquipamentos() {
-  return <div>Conteúdo de Ver Equipamentos</div>;
+  return (
+    <div>
+      <NavBotoesEquipamentos />
+    </div>
+  );
 }

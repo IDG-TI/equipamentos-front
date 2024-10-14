@@ -9,10 +9,9 @@ import Principal from "@organisms/Principal";
 import { CURRENT_VERSION, ReleaseNotes } from "@organisms/Release_Notes";
 import { setCookie } from "nookies";
 import VerEquipamentos from "./VerEquipamentos";
-import CadastrarEquipamento from "./CadastrarEquipamento";
-import RegistrarEmprestimoCalibracao from "@components/organism/RegistrarEmprestimoCalibracao";
-import TermosCompromisso from "./TermosCompromisso";
-import VerRegistrosEmprestimosCalibracao from "./VerRegistrosEmprestimosCalibracao";
+import CadastrarEquipamento from "./modal/entity/Modal_CadastrarEquipamento";
+import RegistrarEmprestimo from "@components/organism/RegistrarEmprestimoCalibracao";
+import VerRegistrosEmprestimos from "./VerRegistrosEmprestimos";
 export default function HeaderNavbar({ roles, userAlreadyViewedReleaseNotes }) {
   const [activeTab, setActiveTab] = useState(0);
   const [tabs, setTabs] = useState<any>([
@@ -85,43 +84,37 @@ export default function HeaderNavbar({ roles, userAlreadyViewedReleaseNotes }) {
               roles={roles}
               itens={[
                 {
-                  role: "VER_EQUIPAMENTOS", // Role para ver equipamentos
+                  role: "VER_EQUIPAMENTOS",
                   title: "Ver Equipamentos",
-                  component: <VerEquipamentos />, // Altere para o componente correspondente
+                  component: <VerEquipamentos />,
                   datacy: "verEquipamentos",
                 },
                 {
-                  role: "CADASTRAR_EQUIPAMENTO", // Role para cadastrar equipamento
+                  role: "CADASTRAR_EQUIPAMENTO",
                   title: "Cadastrar Equipamento",
-                  component: <CadastrarEquipamento />, // Altere para o componente correspondente
+                  component: <CadastrarEquipamento />,
                   datacy: "cadastrarEquipamento",
-                },
-                {
-                  role: "TERMOS_COMPROMISSO", // Role para acessar termos de compromisso
-                  title: "Termos de Compromisso",
-                  component: <TermosCompromisso />, // Altere para o componente correspondente
-                  datacy: "termosCompromisso",
                 },
               ]}
               addTab={addTab}
             />
           )}
-          {containsRole(roles, "GERENCIA_REGISTROS") && ( // Role para gerenciar registros de empréstimos e calibrações
+          {containsRole(roles, "GERENCIA_REGISTROS") && (
             <HeaderDropdown
-              name="Registros"
+              name="Termos de Compromisso"
               roles={roles}
               itens={[
                 {
-                  role: "VER_REGISTROS", // Role para ver registros
-                  title: "Ver Registros de Empréstimos/Calibração",
-                  component: <VerRegistrosEmprestimosCalibracao />, // Altere para o componente correspondente
+                  role: "VER_REGISTROS",
+                  title: "Ver Registros de Empréstimos",
+                  component: <VerRegistrosEmprestimos />,
                   datacy: "verRegistrosEmprestimosCalibracao",
                 },
                 {
-                  role: "REGISTRAR_EMPRESTIMO_CALIBRACAO", // Role para registrar empréstimos ou calibrações
-                  title: "Registrar Empréstimo ou Calibração",
-                  component: <RegistrarEmprestimoCalibracao />, // Altere para o componente correspondente
-                  datacy: "registrarEmprestimoCalibracao",
+                  role: "REGISTRAR_EMPRESTIMO_CALIBRACAO",
+                  title: "Registrar Empréstimos",
+                  component: <RegistrarEmprestimo />,
+                  datacy: "registrarEmprestimo",
                 },
               ]}
               addTab={addTab}

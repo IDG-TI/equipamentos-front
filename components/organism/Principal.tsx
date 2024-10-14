@@ -67,7 +67,15 @@ export default function Principal() {
   }
 
   return (
-    <div className={PrincipalStyle["principal-container"]}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      className={PrincipalStyle["principal-container"]}
+    >
       <div className={PrincipalStyle["container-principal-tables"]}>
         <div className={PrincipalStyle["container-text-picture"]}>
           <picture>

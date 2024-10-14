@@ -1,0 +1,29 @@
+/* styles/Container.module.css */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.container input,
+.container select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
