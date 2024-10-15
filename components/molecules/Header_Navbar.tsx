@@ -10,7 +10,7 @@ import { CURRENT_VERSION, ReleaseNotes } from "@organisms/Release_Notes";
 import { setCookie } from "nookies";
 import VerEquipamentos from "./VerEquipamentos";
 import CadastrarEquipamento from "./modal/entity/Modal_CadastrarEquipamento";
-import RegistrarEmprestimo from "@components/organism/RegistrarEmprestimoCalibracao";
+import RegistrarEmprestimo from "./RegistrarEmprestimo";
 import VerRegistrosEmprestimos from "./VerRegistrosEmprestimos";
 export default function HeaderNavbar({ roles, userAlreadyViewedReleaseNotes }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -111,7 +111,7 @@ export default function HeaderNavbar({ roles, userAlreadyViewedReleaseNotes }) {
                   datacy: "verRegistrosEmprestimosCalibracao",
                 },
                 {
-                  role: "REGISTRAR_EMPRESTIMO_CALIBRACAO",
+                  role: "REGISTRAR_EMPRESTIMOS",
                   title: "Registrar Empréstimos",
                   component: <RegistrarEmprestimo />,
                   datacy: "registrarEmprestimo",

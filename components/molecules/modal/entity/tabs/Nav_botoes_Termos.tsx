@@ -1,14 +1,7 @@
 import { Default_button } from "@components/atoms/Default_button";
-import { useState, useEffect } from "react";
 import styles from "@styles/Nav_botoes.module.css";
-import ModalAdicionarCalibracao from "../Modal_Adicionar_Calibracao";
-import ButtonAction from "@components/atoms/Button_Action";
 
-export default function NabBotoesEquipamentos() {
-  const [addCalibracao, setAddCalibracao] = useState(false);
-  const toggleModal = () => {
-    setAddCalibracao((addCalibracao) => !addCalibracao);
-  };
+export default function NabBotoesTermos() {
   return (
     <div>
       <nav
@@ -23,14 +16,6 @@ export default function NabBotoesEquipamentos() {
         <div>
           <Default_button
             className={styles.button}
-            message="Editar"
-            onClick={() => null}
-            type="button"
-          />
-        </div>
-        <div>
-          <Default_button
-            className={styles.button}
             message="Atualizar"
             onClick={() => null}
             type="button"
@@ -39,7 +24,7 @@ export default function NabBotoesEquipamentos() {
         <div>
           <Default_button
             className={styles.button}
-            message="Excluir"
+            message="Baixa Parcial"
             onClick={() => null}
             type="button"
           />
@@ -47,21 +32,20 @@ export default function NabBotoesEquipamentos() {
         <div>
           <Default_button
             className={styles.button}
-            message="Adicionar Calibração"
-            onClick={toggleModal}
+            message="Baixa Total"
+            onClick={() => null}
             type="button"
           />
         </div>
         <div>
           <Default_button
             className={styles.button}
-            message="Equipamentos para Calibração"
+            message="Emitir Termos de compromisso"
             onClick={() => null}
             type="button"
           />
         </div>
       </nav>
-      {addCalibracao && <ModalAdicionarCalibracao onclose={toggleModal} />}
     </div>
   );
 }

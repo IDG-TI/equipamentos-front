@@ -1,7 +1,7 @@
 "use client";
 import icons from "@assets/Button_Icons";
 import { DefaultButtonProps } from "@/types";
-import ButtonStyle from "@styles/buttons.module.css";
+import ButtonStyle from "@styles/default_button.module.css";
 export function Default_button({
   type = "button",
   onClick,

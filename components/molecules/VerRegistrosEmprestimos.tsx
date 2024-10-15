@@ -1,3 +1,8 @@
+import NabBotoesTermos from "./modal/entity/tabs/Nav_botoes_Termos";
 export default function VerRegistrosEmprestimosCalibracao() {
-  return <div>Conteúdo de Ver Registros de Emprestimos e Calibração</div>;
+  return (
+    <div>
+      <NabBotoesTermos />
+    </div>
+  );
 }

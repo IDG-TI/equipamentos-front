@@ -7,10 +7,9 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   padding: 5px;
   position: relative;
-  background-color: var(--IDGBlue);
+  font-weight: 900;
 }
 
 .button-text {
@@ -47,71 +46,71 @@ button:hover .svg-container {
 }
 
 /* .button-add {
-    font-family: inherit;
-    font-size: 18px;
-    background-color: var(--IDGBlue);
-    color: white;
-    padding: 0.8em 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s;
-    margin-left: 20px;
-    margin-top: 15px;
-    grid-column-start: 8;
-    grid-column-end: 9;
-    cursor: pointer;
-}
-
-.button-add:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
-}
-
-.button-add:active {
-    transform: scale(0.95);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    fill: white;
-    transition: all 0.25s;
-    margin-top: 15px;
-}
-
-.button-add span {
-    display: block;
-    margin-left: 0.4em;
-    transition: all 0.3s;
-}
-
-.button-add svg {
-    width: 18px;
-    height: 18px;
-    fill: white;
-    transition: all 0.3s;
-    display: flex;
-}
-
-.button-add .svg-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-right: 0.5em;
-    transition: all 0.3s;
-}
-
-.button-add:hover .svg-wrapper {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.button-add:hover svg {
-    transform: rotate(45deg);
-} */
+      font-family: inherit;
+      font-size: 18px;
+      background-color: var(--IDGBlue);
+      color: white;
+      padding: 0.8em 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s;
+      margin-left: 20px;
+      margin-top: 15px;
+      grid-column-start: 8;
+      grid-column-end: 9;
+      cursor: pointer;
+  }
+  
+  .button-add:hover {
+      transform: translateY(-2px);
+      box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-add:active {
+      transform: scale(0.95);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      fill: white;
+      transition: all 0.25s;
+      margin-top: 15px;
+  }
+  
+  .button-add span {
+      display: block;
+      margin-left: 0.4em;
+      transition: all 0.3s;
+  }
+  
+  .button-add svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      transition: all 0.3s;
+      display: flex;
+  }
+  
+  .button-add .svg-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-right: 0.5em;
+      transition: all 0.3s;
+  }
+  
+  .button-add:hover .svg-wrapper {
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .button-add:hover svg {
+      transform: rotate(45deg);
+  } */
 
 .button-save {
   width: 15%;

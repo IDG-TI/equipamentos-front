@@ -1,9 +1,7 @@
 import { TextInput } from "@components/atoms/TextInput";
 import ButtonAction from "@components/atoms/Button_Action";
 import { useState } from "react";
-import { NumberInput } from "@components/atoms/NumberInput";
 import styles from "@styles/container.module.css";
-import { set } from "cypress/types/lodash";
 
 export default function Modal_CadastrarEquipamento() {
   const [capacidade, setCapacidade] = useState("");
@@ -13,7 +11,7 @@ export default function Modal_CadastrarEquipamento() {
   const [limite, setLimite] = useState("");
   const [obs, setObs] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     // enviar para uma API
@@ -146,10 +144,15 @@ export default function Modal_CadastrarEquipamento() {
                   </div>
                 </div>
               </div>
-
               <div>
-                <label htmlFor="situacao">Situação: </label>
-                <select id="situacao" name="situacao"></select>
+                <div>
+                  <label htmlFor="situacao">Situação: </label>
+                  <select id="situacao" name="situacao"></select>
+                </div>
+                <div>
+                  <label htmlFor="localizacao">Frequência de calibração:</label>
+                  <select id="frqCalib" name="frqCalib"></select>
+                </div>
               </div>
               <div>
                 <div>
@@ -179,13 +182,14 @@ export default function Modal_CadastrarEquipamento() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                width: "100%",
               }}
             >
               <ButtonAction
                 datacy="cadastrarEquipamento"
                 type="submit"
-                message="Cadastrar Equipamento"
-                buttonType="button-confirm"
+                message={"Cadastrar\nEquipamento"}
+                buttonType="button-add"
               />
             </div>
           </div>
