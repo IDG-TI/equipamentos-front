@@ -522,6 +522,13 @@ export interface ButtonModalProps {
   gridEnd?: string;
 }
 
+export interface Bancos {
+  ispb: string;
+  name?: string;
+  code?: number;
+  fullName?: string;
+}
+
 export interface ModalController {
   open: ArrowFunction;
   close: VoidArrowFunction;

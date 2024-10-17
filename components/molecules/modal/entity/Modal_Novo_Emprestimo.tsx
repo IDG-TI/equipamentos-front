@@ -2,7 +2,11 @@ import { useState } from "react";
 import { TextInput } from "@components/atoms/TextInput";
 import styles from "@styles/container.module.css";
 import ButtonAction from "@components/atoms/Button_Action";
+import EmprestimoEquipamento from "@components/molecules/Emprestimo_Equipamento";
+import useBancos from "@util/apis/useBancos";
 export default function ModalNovoEmprestimo() {
+  const { banco } = useBancos();
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -33,13 +37,20 @@ export default function ModalNovoEmprestimo() {
             <div className={styles.container}>
               <div>
                 <label htmlFor="responsavel">Responsável: </label>
-                <select id="responsavel" name="responsavel"></select>
+                <select id="responsavel" name="responsavel">
+                  <option value="" selected disabled></option>
+                </select>
+                {banco.map((banco) => (
+                  <option> {banco.name}</option>
+                ))}
               </div>
               <div>
                 <label htmlFor="secao">Seção: </label>
                 <select id="secao" name="secao"></select>
               </div>
             </div>
+
+            <EmprestimoEquipamento />
 
             <div
               style={{
@@ -50,10 +61,10 @@ export default function ModalNovoEmprestimo() {
               }}
             >
               <ButtonAction
-                datacy="cadastrarEquipamento"
+                datacy="salvarEmprestimo"
                 type="submit"
-                message={"Cadastrar\nEquipamento"}
-                buttonType="button-add"
+                message={"Salvar"}
+                buttonType="button-confirm"
               />
             </div>
           </div>
